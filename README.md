@@ -37,26 +37,85 @@ Docker	Containerization tool to ensure consistent development and deployment env
 Git & GitHub	Version control and collaboration tools for managing project code and tracking changes.
 GitHub Actions	Automates testing, building, and deployment processes for continuous integration and delivery (CI/CD).
 
-📌 Key Features
-User authentication & authorization
+# 🗃️ Database Design
+Below is an overview of the key entities and their relationships in the StayBackend project:
 
-Property listing & booking APIs
+🧑‍💼 Users
+Stores information about platform users.
 
-Secure data transactions
+id: unique identifier
 
-Well-structured, relational database
+name: full name
 
-Deployment-ready CI/CD setup
+email: unique email address
 
-⚙️ Tasks Overview
-Project Initialization – GitHub repo setup with README
+password: hashed password
 
-Team Roles – Document project roles and duties
+role: host or guest
 
-Tech Stack – Brief of tools and their roles
+Relationship:
+A user can list multiple properties and make multiple bookings.
 
-Database Design – ERD and relationship mapping
+🏠 Properties
+Details of homes listed on the platform.
 
-API Security – Token-based auth & protection
+id: unique identifier
 
-CI/CD – Build/test/deploy pipelines via GitHub Actions
+owner_id: references user (host)
+
+title: name of the property
+
+description: brief details
+
+location: address or coordinates
+
+Relationship:
+A property belongs to a user (host) and can have many bookings and reviews.
+
+📅 Bookings
+Tracks reservations made by users.
+
+id: unique identifier
+
+property_id: references the booked property
+
+user_id: references the guest
+
+check_in: booking start date
+
+check_out: booking end date
+
+Relationship:
+Each booking is made by one user for one property.
+
+✍️ Reviews
+Captures user feedback.
+
+id: unique identifier
+
+user_id: reviewer
+
+property_id: reviewed property
+
+rating: numeric rating
+
+comment: optional text feedback
+
+Relationship:
+A user can review many properties; a property can have many reviews.
+
+💳 Payments
+Manages transactions for bookings.
+
+id: unique identifier
+
+booking_id: references the related booking
+
+amount: amount paid
+
+status: success, failed, pending
+
+payment_date: timestamp of transaction
+
+Relationship:
+Each payment is tied to one booking.

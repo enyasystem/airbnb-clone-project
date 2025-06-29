@@ -119,3 +119,22 @@ payment_date: timestamp of transaction
 
 Relationship:
 Each payment is tied to one booking.
+
+# 🧩 Feature Breakdown
+👤 User Management
+Allows users to register, log in, and manage their profiles securely. It handles authentication, role-based access (host or guest), and password protection to ensure data privacy.
+
+# 🏘️ Property Management
+Hosts can list, update, and delete properties with relevant details like title, location, and description. This feature enables users to showcase their accommodations to potential guests.
+
+# 📅 Booking System
+Guests can book available properties for specific dates. This module ensures date availability, prevents double-bookings, and allows both users and hosts to track booking history.
+
+# 💳 Payment Integration
+Securely handles payment processing for bookings. It tracks transactions, manages payment statuses, and ensures a smooth financial flow between guests and hosts.
+
+# ✍️ Reviews & Ratings
+Guests can leave feedback and rate properties after their stay. This feature helps maintain trust and transparency in the platform by giving future guests insight into past experiences.
+
+# 🔐 API Security
+Implements token-based authentication and other safeguards to ensure all API endpoints are secure. This prevents unauthorized access and protects sensitive user and payment data.

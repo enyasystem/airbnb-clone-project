@@ -1,7 +1,7 @@
 # StayBackend: Airbnb Clone Project
 🏡💻 A backend-focused blueprint of an Airbnb-like booking platform. This project simulates real-world full-stack development with a focus on database design, API development, and secure backend architecture.  🚀🔐🧠
 
-🚀 Project Goals
+# 🚀 Project Goals
 Build a scalable, real-world booking app backend
 
 Apply backend principles with Django & MySQL
@@ -10,7 +10,7 @@ Practice secure API development and CI/CD integration
 
 Collaborate via GitHub and document effectively
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 Backend Framework: Django
 
 Database: MySQL
@@ -21,7 +21,7 @@ Version Control: Git & GitHub
 
 CI/CD: GitHub Actions / Docker
 
-👥 Team Roles
+# 👥 Team Roles
 Role	Responsibility
 Backend Developer	Designs APIs, business logic, and ensures backend performance
 Database Admin	Structures, optimizes, and secures the database schema
@@ -40,7 +40,7 @@ GitHub Actions	Automates testing, building, and deployment processes for continu
 # 🗃️ Database Design
 Below is an overview of the key entities and their relationships in the StayBackend project:
 
-🧑‍💼 Users
+# 🧑‍💼 Users
 Stores information about platform users.
 
 id: unique identifier
@@ -56,7 +56,7 @@ role: host or guest
 Relationship:
 A user can list multiple properties and make multiple bookings.
 
-🏠 Properties
+# 🏠 Properties
 Details of homes listed on the platform.
 
 id: unique identifier
@@ -72,7 +72,7 @@ location: address or coordinates
 Relationship:
 A property belongs to a user (host) and can have many bookings and reviews.
 
-📅 Bookings
+# 📅 Bookings
 Tracks reservations made by users.
 
 id: unique identifier
@@ -88,7 +88,7 @@ check_out: booking end date
 Relationship:
 Each booking is made by one user for one property.
 
-✍️ Reviews
+# ✍️ Reviews
 Captures user feedback.
 
 id: unique identifier
@@ -104,7 +104,7 @@ comment: optional text feedback
 Relationship:
 A user can review many properties; a property can have many reviews.
 
-💳 Payments
+# 💳 Payments
 Manages transactions for bookings.
 
 id: unique identifier
@@ -154,3 +154,17 @@ All sensitive data, especially passwords and payment information, is encrypted a
 
 # 🛡️ Input Validation & Sanitization
 All user inputs are validated and sanitized to prevent injection attacks (e.g., SQL, XSS). This maintains the reliability and integrity of the database.
+
+# ⚙️ CI/CD Pipeline
+CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the process of testing, building, and deploying code. This ensures that every change made to the codebase is automatically verified and deployed without manual intervention.
+
+In this project, CI/CD helps maintain code quality, catch bugs early, and ensure fast and reliable deployments.
+
+# 🛠 Tools Used
+GitHub Actions: Automates tasks such as testing, linting, and deployment.
+
+Docker: Provides a consistent containerized environment for development, testing, and deployment.
+
+GitHub: Triggers pipelines when code is pushed or pull requests are made.
+
+With CI/CD, the team can ship updates faster and more confidently, reducing downtime and human errors.

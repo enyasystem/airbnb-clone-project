@@ -136,5 +136,21 @@ Securely handles payment processing for bookings. It tracks transactions, manage
 # ✍️ Reviews & Ratings
 Guests can leave feedback and rate properties after their stay. This feature helps maintain trust and transparency in the platform by giving future guests insight into past experiences.
 
+
 # 🔐 API Security
-Implements token-based authentication and other safeguards to ensure all API endpoints are secure. This prevents unauthorized access and protects sensitive user and payment data.
+Securing the backend is essential to protect sensitive user information, payment data, and the integrity of the platform. The following measures are implemented:
+
+# ✅ Authentication
+Token-based authentication (e.g., JWT) ensures that only registered users can access protected endpoints. This prevents unauthorized access to user accounts and private data.
+
+# 🔒 Authorization
+Role-based access control restricts what different users (e.g., host vs guest) can do. It ensures that users only perform actions allowed by their role — like only hosts managing listings.
+
+# 🚫 Rate Limiting
+Limits the number of API requests per user over a time period to prevent abuse or denial-of-service (DoS) attacks. It helps maintain server performance and security.
+
+# 🔐 Data Encryption
+All sensitive data, especially passwords and payment information, is encrypted at rest and in transit. This protects against data breaches and information leaks.
+
+# 🛡️ Input Validation & Sanitization
+All user inputs are validated and sanitized to prevent injection attacks (e.g., SQL, XSS). This maintains the reliability and integrity of the database.

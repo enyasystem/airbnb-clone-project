@@ -28,6 +28,15 @@ Database Admin	Structures, optimizes, and secures the database schema
 DevOps Engineer	Sets up CI/CD pipelines, containerization, and deployment workflow
 Project Coordinator	Manages timelines, documentation, and team task alignment
 
+# 🧰 Technology Stack
+Technology	Purpose
+Django	A powerful Python web framework used to build robust RESTful APIs and manage backend logic.
+MySQL	A relational database system for storing user data, listings, and bookings securely and efficiently.
+GraphQL	An API query language that allows clients to request exactly the data they need, improving performance and flexibility.
+Docker	Containerization tool to ensure consistent development and deployment environments.
+Git & GitHub	Version control and collaboration tools for managing project code and tracking changes.
+GitHub Actions	Automates testing, building, and deployment processes for continuous integration and delivery (CI/CD).
+
 📌 Key Features
 User authentication & authorization
 

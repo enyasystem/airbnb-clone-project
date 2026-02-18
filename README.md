@@ -1,4 +1,38 @@
 # StayBackend: Airbnb Clone Project
+
+## ▶️ Quick Start (Run Locally)
+
+This repository now includes a minimal runnable Django backend scaffold.
+
+### 1) Create and activate a virtual environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 2) Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3) Apply migrations
+```bash
+python manage.py migrate
+```
+
+### 4) Run the development server
+```bash
+python manage.py runserver 0.0.0.0:8000
+```
+
+### 5) Verify the service
+Open: `http://127.0.0.1:8000/api/health/`
+
+Expected response:
+```json
+{"status":"ok","service":"staybackend"}
+```
+
 🏡💻 A backend-focused blueprint of an Airbnb-like booking platform. This project simulates real-world full-stack development with a focus on database design, API development, and secure backend architecture.  🚀🔐🧠
 
 # 🚀 Project Goals
